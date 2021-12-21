@@ -19,7 +19,6 @@ def main():
     horizontal = []
     first_run = True
     with open("day_input.txt", encoding="utf-8") as day_input:
-        count_lines = 0
         for line in day_input:
             if first_run:
                 for x in range(len(line)-1):
@@ -28,7 +27,6 @@ def main():
                 for x in range(len(line)-1):
                     horizontal[x].append(int(line[x]))
             first_run = False
-            count_lines = count_lines +1 
     for h in horizontal:
         gamma_bit, epislon_bit = get_signifcant(h)
         gamma = gamma + str(gamma_bit)
